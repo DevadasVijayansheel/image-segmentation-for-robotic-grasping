@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sam2-interactive-segmentation"
+version = "0.1.0"
+description = "Interactive image segmentation using SAM-2 (Segment Anything Model 2) with a click-based interface."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+keywords = ["segmentation", "SAM-2", "computer-vision", "pytorch", "huggingface"]
+authors = [
+    { name = "utn@hp", email = "your.email@example.com" }, 
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Development Status :: 4 - Beta",
+]
+
+dependencies = [
+    "torch==2.6.0+cu124", 
+    "numpy==2.1.2",
+    "matplotlib==3.10.7",
+    "opencv-python==4.12.0.88",
+    "Pillow==11.3.0",
+    "sam2 @ git+https://github.com/facebookresearch/sam2.git@2b90b9f5ceec907a1c18123530e92e794ad901a4" 
+]
+
+[tool.black]
+line-length = 88
+target-version = ['py310']
+
+[tool.ruff]
+line-length = 88
+select = ["E", "F", "I", "W"]
+ignore = ["T201"]

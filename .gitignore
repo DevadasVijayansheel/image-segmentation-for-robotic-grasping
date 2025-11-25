@@ -1,0 +1,28 @@
+# Virtual Environment
+sam2/
+.venv/
+venv/
+env/
+
+# Byte-compiled files
+__pycache__/
+*.py[cod]
+
+# PyTorch / Deep Learning Artifacts
+.pt
+.pth
+.bin
+.safetensors
+*.ckpt
+
+# IDE/OS files
+.DS_Store
+.idea/
+
+# Output and Logs
+/output/*
+!/output/sam2_mask.png
+
+# Hugging Face Cache
+hf-xet-storage/
+.huggingface/
