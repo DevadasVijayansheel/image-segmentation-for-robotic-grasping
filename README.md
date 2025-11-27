@@ -1,10 +1,18 @@
 
-### 🎥    Demonstration Videos
+## 🎥 Demonstration Videos
 
-| Demo | Description |
-| :--: | :-- |
-| [![Grocery Items](assets/grocessry_items.gif)](assets/grocessry_items.webm) | Demonstrates segmentation of **multiple grocery items and its binary masks** in a single image. |
-| [![Object Picking](assets/object_picking.gif)](assets/object_picking.webm) | Shows generation of a **showing image segmenation appile to an object where the manipulatorcan guide to garsp it** for object picking tasks. |
+### 🛒 Multiple Grocery Item Segmentation
+[![Grocery Items Segmentation](assets/grocessry_items.gif)](assets/grocessry_items.webm)
+
+Demonstrates segmentation of **multiple grocery items** and generation of corresponding **binary masks** in a single image.
+
+---
+
+### 🤖 Vision-Based Robotic Object Grasping
+[![Object Picking Segmentation](assets/object_picking.gif)](assets/object_picking.webm)
+
+Demonstrates **vision-based image segmentation for robotic grasping**, enabling a manipulator to identify and accurately grasp a target object.
+
 
 
 # 💜 SAM-2 Interactive Image Segmentation
