@@ -10,7 +10,7 @@ print("Loading SAM2 model from HuggingFace…")
 predictor = SAM2ImagePredictor.from_pretrained("facebook/sam2-hiera-large")
 
 # Load image
-IMAGE_PATH = "images/image.jpg"
+IMAGE_PATH = "images/items.jpg"
 image = Image.open(IMAGE_PATH).convert("RGB")
 image_np = np.array(image)
 predictor.set_image(image_np)
