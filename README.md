@@ -1,11 +1,11 @@
-### 🎥 Demonstration Videos
 
-Here are demonstrations of the interactive image segmentation process using the SAM-2 model.
+### 🎥    Demonstration Videos
 
-| Demo Video | Description |
-| :---: | :--- |
-| <video src="assets/grocessry_items.webm" controls width="400" muted></video> | Demonstrates the segmentation of **multiple grocery items** in a single image. |
-| <video src="assets/object_picking.webm" controls width="400" muted></video> | Shows the process of generating a **single mask** for object picking tasks. |
+| Demo | Description |
+| :--: | :-- |
+| [![Grocery Items](assets/grocessry_items.gif)](assets/grocessry_items.webm) | Demonstrates segmentation of **multiple grocery items and its binary masks** in a single image. |
+| [![Object Picking](assets/object_picking.gif)](assets/object_picking.webm) | Shows generation of a **showing image segmenation appile to an object where the manipulatorcan guide to garsp it** for object picking tasks. |
+
 
 # 💜 SAM-2 Interactive Image Segmentation
 
