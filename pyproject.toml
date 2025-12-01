@@ -1,28 +1,25 @@
 # ===============================
-# Build system (PEP 517/518)
+# Build system
 # ===============================
 [build-system]
 requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
 
 # ===============================
-# Project metadata (PEP 621)
+# Project metadata
 # ===============================
 [project]
-name = "sam2-click-segmentation"
+name = "image-segmentation-for-robotic-grasping"
 version = "0.1.0"
-description = "Minimal click-based image segmentation using SAM-2."
+description = "Interactive image segmentation using SAM-2 for robotic grasping."
 readme = "README.md"
 requires-python = ">=3.10"
-license = { text = "MIT" }
+license = "MIT"
 
 authors = [
     { name = "Devadas Vijayan Sheela" }
 ]
 
-# ===============================
-# Runtime dependencies
-# ===============================
 dependencies = [
     "torch",
     "torchvision",
@@ -32,3 +29,7 @@ dependencies = [
     "Pillow",
     "sam2 @ git+https://github.com/facebookresearch/sam2.git"
 ]
+
+# ✅ THIS IS THE IMPORTANT PART
+[tool.setuptools]
+packages = []
