@@ -1,102 +1,34 @@
 # ===============================
-# Build system configuration
+# Build system (PEP 517/518)
 # ===============================
 [build-system]
-requires = ["setuptools>=61.0", "wheel"]
+requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
-
 
 # ===============================
 # Project metadata (PEP 621)
 # ===============================
 [project]
-name = "sam2-interactive-segmentation"
+name = "sam2-click-segmentation"
 version = "0.1.0"
-description = "Interactive image segmentation using SAM-2 with a click-based interface for vision-based robotic grasping."
+description = "Minimal click-based image segmentation using SAM-2."
 readme = "README.md"
 requires-python = ">=3.10"
-license = { file = "LICENSE" }
+license = { text = "MIT" }
 
 authors = [
-  { name = "Devadas Vijayan Sheela" }
+    { name = "Devadas Vijayan Sheela" }
 ]
-
-keywords = [
-  "image-segmentation",
-  "computer-vision",
-  "robotic-grasping",
-  "SAM-2",
-  "segment-anything",
-  "deep-learning",
-  "pytorch"
-]
-
-classifiers = [
-  "Programming Language :: Python :: 3",
-  "Programming Language :: Python :: 3.10",
-  "License :: OSI Approved :: MIT License",
-  "Operating System :: OS Independent",
-  "Development Status :: 4 - Beta",
-  "Topic :: Scientific/Engineering :: Artificial Intelligence",
-  "Topic :: Scientific/Engineering :: Image Processing"
-]
-
 
 # ===============================
 # Runtime dependencies
 # ===============================
 dependencies = [
-  "torch>=2.1",
-  "torchvision>=0.16",
-  "numpy>=1.24",
-  "matplotlib>=3.7",
-  "opencv-python>=4.8",
-  "Pillow>=10.0",
-  "tqdm>=4.65",
-  "sam2 @ git+https://github.com/facebookresearch/sam2.git"
+    "torch",
+    "torchvision",
+    "numpy",
+    "opencv-python",
+    "matplotlib",
+    "Pillow",
+    "sam2 @ git+https://github.com/facebookresearch/sam2.git"
 ]
-
-
-# ===============================
-# Optional dependencies
-# ===============================
-[project.optional-dependencies]
-dev = [
-  "black",
-  "ruff",
-  "ipython",
-  "jupyter"
-]
-
-docs = [
-  "mkdocs",
-  "mkdocs-material"
-]
-
-
-# ===============================
-# Tooling configuration
-# ===============================
-[tool.black]
-line-length = 88
-target-version = ["py310"]
-skip-string-normalization = false
-
-
-[tool.ruff]
-line-length = 88
-select = ["E", "F", "I", "W"]
-ignore = ["T201"]
-
-
-# ===============================
-# Setuptools configuration
-# ===============================
-[tool.setuptools]
-zip-safe = false
-
-
-[tool.setuptools.packages.find]
-where = ["."]
-exclude = ["tests*", "assets*", "images*", "output*"]
-include = ["sam2_interactive_segmentation*"]
